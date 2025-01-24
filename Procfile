@@ -1,1 +1,1 @@
-web: cd sample-application-otel-agent && npm start
+web: npm start
