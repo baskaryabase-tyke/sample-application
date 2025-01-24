@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-tutorial-trace-gen
+spec:
+  selector:
+    matchLabels:
+      app: node-tutorial-trace-gen
+  template:
+    metadata:
+      labels:
+        app: node-tutorial-trace-gen
+    spec:
+      containers:
+      - name: node-tutorial-trace-gen
+        image: gpstrange/node-tutorial-trace-gen:1.2
+        imagePullPolicy: Always
+        env:
+        - name: SERVER_URL
+          value: http://node-tutorial-app.tutorial-app.svc.cluster.local:8081
+

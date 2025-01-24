@@ -1,0 +1,7 @@
+service_name: server_2
+service_identifier: server_2
+app_name: app_2
+reporting:
+  endpoint: https://dev.tyke.ai:4317
+  secure: false
+  trace_reporter_type: OTLP

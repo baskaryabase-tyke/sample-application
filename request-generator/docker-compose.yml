@@ -1,0 +1,6 @@
+version: "3.3"
+
+services:
+  api:
+    image: gpstrange/node-tutorial-trace-gen:1.2
+    command: npm start
