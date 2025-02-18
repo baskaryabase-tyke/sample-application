@@ -29,6 +29,11 @@ app.get("/", (req, res) => {
   res.json({ message: "Welcome to node application." });
 });
 
+app.get("/greet/:name", (req, res) => {
+  console.log(`Hello ${req.params.name}`)
+  res.json({ message: "Welcome to node application." + ` ${req.params.name}` });
+});
+
 app.get("/requests", (req, res) => {
   res.json({requestsLength: requests.length});
 });
